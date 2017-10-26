@@ -1,0 +1,29 @@
+{
+  "name": "hbotii",
+  "version": "0.0.1",
+  "description": "Hangouts bot playground",
+  "main": "index.js",
+  "dependencies": {
+    "hangouts-bot": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcker/hbotii.git"
+  },
+  "keywords": [
+    "bot",
+    "hangouts",
+    "node",
+    "google"
+  ],
+  "author": "Marcos Garcia de Lima <marckfree@gmail.com> (http://marcker.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcker/hbotii/issues"
+  },
+  "homepage": "https://github.com/marcker/hbotii#readme"
+}
