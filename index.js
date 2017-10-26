@@ -78,7 +78,7 @@ function onMessage(from, message) {
 		`Você descobriu que sou um bot: hbotii é como me chamam e estou em
 		https://github.com/marcker/hbotii. Meu criador fez um código pobre, mas
 		ele prometeu me refatorar ;-)`,
-		'sou mesmo um bot (hbotii: https://github.com/marcker/hbotii)',
+		'sou mesmo um bot (hbotii: https://github.com/marcker/hbotii)'
 	]
 
 	let helpOccurrences = 0
