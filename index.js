@@ -64,9 +64,27 @@ function onMessage(from, message) {
 		'Me manda, ai a gente vê :-)'
 	]
 
+	const botDict = [
+		'bot',
+		'robo',
+		'robô',
+		'android'
+	]
+
+	const botAnswers = [
+		`Você sacou - sou um bot mesmo. Meu nome é hbotii e estou vivo em
+		https://github.com/marcker/hbotii. Meu criador fez um código pobre, mas
+		ele prometeu me refatorar ;-)`,
+		`Você descobriu que sou um bot: hbotii é como me chamam e estou em
+		https://github.com/marcker/hbotii. Meu criador fez um código pobre, mas
+		ele prometeu me refatorar ;-)`,
+		'sou mesmo um bot (hbotii: https://github.com/marcker/hbotii)',
+	]
+
 	let helpOccurrences = 0
 	let greetingsOccurrences = 0
 	let offensesAndOthersOccurrences = 0
+	let botOccurrences = 0
 
 	message = message.toLowerCase();
 
@@ -85,10 +103,16 @@ function onMessage(from, message) {
 		if (message.includes(helpDict[i])) helpOccurrences += 1
 	}
 
+	// bot
+	for (let i = 0, len = botDict.length; i < len; i += 1) {
+		if (message.includes(botDict[i])) botOccurrences += 1
+	}
+
 	// horrible I knows... TODO: Refact, refact and refact
 	if (greetingsOccurrences > 0) bot.sendMessage(from, greetingsAnswers[Math.floor(Math.random() * greetingsAnswers.length)])
 	if (offensesAndOthersOccurrences > 0) bot.sendMessage(from, offensesAndOthersAnswers[Math.floor(Math.random() * offensesAndOthersAnswers.length)])
 	if (helpOccurrences > 0) bot.sendMessage(from, helpAnswers[Math.floor(Math.random() * helpAnswers.length)])
+	if (botOccurrences > 0) bot.sendMessage(from, botAnswers[Math.floor(Math.random() * botAnswers.length)])
 }
 
 bot.on('online', onOnline)
