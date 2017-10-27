@@ -1,3 +1,5 @@
+'use strict'
+
 const hangoutsBot = require('hangouts-bot')
 
 const user = process.env.HANGOUTS_USER
@@ -86,7 +88,7 @@ function onMessage(from, message) {
 	let offensesAndOthersOccurrences = 0
 	let botOccurrences = 0
 
-	message = message.toLowerCase();
+	message = message.toLowerCase()
 
 	// greetings
 	for (let i = 0, len = greetingsDict.length; i < len; i += 1) {
