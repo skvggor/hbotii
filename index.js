@@ -103,21 +103,25 @@ function onMessage(from, message) {
 
 	message = message.toLowerCase()
 
-	function talk(dict, answers) {
-		let accumulator = 0
-
-		for (let i = 0, len = dict.length; i < len; i += 1) {
-			if (message.includes(dict[i])) accumulator += 1
-		}
-
-		if (accumulator > 0) bot.sendMessage(from, answers[Math.floor(Math.random() * answers.length)])
+	function shakeArray(answers) {
+		return answers[Math.floor(Math.random() * answers.length)]
 	}
 
-	talk(greetingsDict, greetingsAnswers);
-	talk(offensesAndOthersDict, offensesAndOthersAnswers);
-	talk(botDict, botAnswers);
-	talk(helpDict, helpAnswers);
-	talk(coffeeDict, coffeeAnswers);
+	function talk(dictArray, answers) {
+		let accumulator = 0
+
+		for (let i = 0, len = dictArray.length; i < len; i += 1) {
+			if (message.includes(dictArray[i])) accumulator += 1
+		}
+
+		if (accumulator > 0) bot.sendMessage(from, shakeArray(answers))
+	}
+
+	talk(greetingsDict, greetingsAnswers)
+	talk(offensesAndOthersDict, offensesAndOthersAnswers)
+	talk(botDict, botAnswers)
+	talk(helpDict, helpAnswers)
+	talk(coffeeDict, coffeeAnswers)
 }
 
 bot.on('online', onOnline)
