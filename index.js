@@ -23,11 +23,11 @@ function onMessage(from, message) {
 	]
 
 	const greetingsAnswers = [
-		'Opa, como vai? Tudo certo? Por aqui beleza.',
-		'Tudo bem?',
-		'Por aqui tranquilo.',
-		'Só de boa?',
-		'Opa, tudo beleza!'
+		'bot: Opa, como vai? Tudo certo? Por aqui beleza.',
+		'bot: Tudo bem?',
+		'bot: Por aqui tranquilo.',
+		'bot: Só de boa?',
+		'bot: Opa, tudo beleza!'
 	]
 
 	const offensesAndOthersDict = [
@@ -39,11 +39,11 @@ function onMessage(from, message) {
 	]
 
 	const offensesAndOthersAnswers = [
-		'Que isso novinho... Não abusa.',
-		'Se liga pô...',
-		'É nada.',
-		'Olha as palavras...',
-		'Nem brinca com isso, se não vou ter uma recaída.'
+		'bot: Que isso novinho... Não abusa.',
+		'bot: Se liga pô...',
+		'bot: É nada.',
+		'bot: Olha as palavras...',
+		'bot: Nem brinca com isso, se não vou ter uma recaída.'
 	]
 
 	const helpDict = [
@@ -56,11 +56,11 @@ function onMessage(from, message) {
 	]
 
 	const helpAnswers = [
-		'Opa, só um segundo :-)',
-		'Como assim, diz ai.',
-		'Fala, mestre! Pode falar o que precisa.',
-		'Posso sim, o que foi?',
-		'Me manda, ai a gente vê :-)'
+		'bot: Opa, só um segundo :-)',
+		'bot: Como assim, diz ai.',
+		'bot: Fala, mestre! Pode falar o que precisa.',
+		'bot: Posso sim, o que foi?',
+		'bot: Me manda, ai a gente vê :-)'
 	]
 
 	const botDict = [
@@ -71,13 +71,13 @@ function onMessage(from, message) {
 	]
 
 	const botAnswers = [
-		`Você sacou - sou um bot mesmo. Meu nome é hbotii e estou vivo em
+		`bot: Você sacou - sou um bot mesmo. Meu nome é hbotii e estou vivo em
 		https://github.com/marcker/hbotii. Meu criador fez um código pobre, mas
 		ele prometeu me refatorar ;-)`,
-		`Você descobriu que sou um bot: hbotii é como me chamam e estou em
+		`bot: Você descobriu que sou um bot: hbotii é como me chamam e estou em
 		https://github.com/marcker/hbotii. Meu criador fez um código pobre, mas
 		ele prometeu me refatorar ;-)`,
-		'sou mesmo um bot (hbotii: https://github.com/marcker/hbotii)'
+		'bot: sou mesmo um bot (hbotii: https://github.com/marcker/hbotii)'
 	]
 
 	const coffeeDict = [
@@ -93,12 +93,12 @@ function onMessage(from, message) {
 	]
 
 	const coffeeAnswers = [
-		'Vou sim, só um segundo.',
-		'bora, as 17h?',
-		'to afim, \'usou a cabeça\' hoje? Chegou cedão...',
-		'Por mim vamos sim!',
-		'Vamos... Chama os caras ai.',
-		'Já já vamos. Só um minuto; matar uma coisa aqui.'
+		'bot: Vou sim, só um segundo.',
+		'bot: bora, as 17h?',
+		'bot: to afim, \'usou a cabeça\' hoje? Chegou cedão...',
+		'bot: Por mim vamos sim!',
+		'bot: Vamos... Chama os caras ai.',
+		'bot: Já já vamos. Só um minuto; matar uma coisa aqui.'
 	]
 
 	let helpOccurrences = 0
