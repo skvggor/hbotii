@@ -101,45 +101,23 @@ function onMessage(from, message) {
 		'bot: Já já vamos. Só um minuto; matar uma coisa aqui.'
 	]
 
-	let helpOccurrences = 0
-	let greetingsOccurrences = 0
-	let offensesAndOthersOccurrences = 0
-	let botOccurrences = 0
-	let coffeeOccurrences = 0
-
 	message = message.toLowerCase()
 
-	// greetings
-	for (let i = 0, len = greetingsDict.length; i < len; i += 1) {
-		if (message.includes(greetingsDict[i])) greetingsOccurrences += 1
+	function talk(dict, answers) {
+		let accumulator = 0
+
+		for (let i = 0, len = dict.length; i < len; i += 1) {
+			if (message.includes(dict[i])) accumulator += 1
+		}
+
+		if (accumulator > 0) bot.sendMessage(from, answers[Math.floor(Math.random() * answers.length)])
 	}
 
-	// offenses and others
-	for (let i = 0, len = offensesAndOthersDict.length; i < len; i += 1) {
-		if (message.includes(offensesAndOthersDict[i])) offensesAndOthersOccurrences += 1
-	}
-
-	// help
-	for (let i = 0, len = helpDict.length; i < len; i += 1) {
-		if (message.includes(helpDict[i])) helpOccurrences += 1
-	}
-
-	// bot
-	for (let i = 0, len = botDict.length; i < len; i += 1) {
-		if (message.includes(botDict[i])) botOccurrences += 1
-	}
-
-	// coffee
-	for (let i = 0, len = coffeeDict.length; i < len; i += 1) {
-		if (message.includes(coffeeDict[i])) coffeeOccurrences += 1
-	}
-
-	// horrible I knows... TODO: Refact, refact and refact
-	if (greetingsOccurrences > 0) bot.sendMessage(from, greetingsAnswers[Math.floor(Math.random() * greetingsAnswers.length)])
-	if (offensesAndOthersOccurrences > 0) bot.sendMessage(from, offensesAndOthersAnswers[Math.floor(Math.random() * offensesAndOthersAnswers.length)])
-	if (helpOccurrences > 0) bot.sendMessage(from, helpAnswers[Math.floor(Math.random() * helpAnswers.length)])
-	if (botOccurrences > 0) bot.sendMessage(from, botAnswers[Math.floor(Math.random() * botAnswers.length)])
-	if (coffeeOccurrences > 0) bot.sendMessage(from, coffeeAnswers[Math.floor(Math.random() * coffeeAnswers.length)])
+	talk(greetingsDict, greetingsAnswers);
+	talk(offensesAndOthersDict, offensesAndOthersAnswers);
+	talk(botDict, botAnswers);
+	talk(helpDict, helpAnswers);
+	talk(coffeeDict, coffeeAnswers);
 }
 
 bot.on('online', onOnline)
