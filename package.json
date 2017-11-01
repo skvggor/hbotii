@@ -4,10 +4,11 @@
   "description": "Google Hangouts bot playground",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
-    "hangouts-bot": "^0.2.1"
+    "hangouts-bot": "^0.2.1",
+    "nodemon": "^1.12.1"
   },
   "repository": {
     "type": "git",
