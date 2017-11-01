@@ -1,11 +1,20 @@
 'use strict'
 
+const express = require('express')
+const app = express()
+const path = require('path')
+const port = process.env.PORT || 8080
+
 const hangoutsBot = require('hangouts-bot')
 
 const user = process.env.HANGOUTS_USER
 const password = process.env.HANGOUTS_PASSWORD
 
 const bot = new hangoutsBot(user, password)
+
+// serving
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/index.html')))
+app.listen(port)
 
 function onOnline() {
 	console.log('online')

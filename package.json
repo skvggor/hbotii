@@ -7,6 +7,7 @@
     "start": "./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "hangouts-bot": "^0.2.1",
     "nodemon": "^1.12.1"
   },
