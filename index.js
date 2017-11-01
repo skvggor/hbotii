@@ -94,7 +94,7 @@ function onMessage(from, message) {
 
 	const coffeeAnswers = [
 		'bot: Vou sim, só um segundo.',
-		'bot: bora, as 17h?',
+		'bot: bora, às 17h?',
 		'bot: to afim, \'usou a cabeça\' hoje? Chegou cedão...',
 		'bot: Por mim vamos sim!',
 		'bot: Vamos... Chama os caras ai.',
