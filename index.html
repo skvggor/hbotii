@@ -7,6 +7,47 @@
 		<title>hbotii</title>
 	</head>
 	<body>
-		<h1>hbotii</h1>
+		<style>
+			@keyframes status {
+				0% { background-color: #fff; }
+				50% { background-color: #33eb95; }
+				100% { background-color: #fff; }
+			}
+
+			main {
+				font-size: 0;
+				text-align: center;
+			}
+
+			span {
+				display: inline-block;
+				line-height: 1;
+				vertical-align: middle;
+			}
+
+			.status {
+				animation: status 1s infinite;
+				background-color: #33eb95;
+				border: 2px solid #f8f8f8;
+				border-radius: 50%;
+				height: 20px;
+				margin-right: 10px;
+				transition: background-color .3s ease;
+				width: 20px;
+			}
+
+			.name {
+				color: #333;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+			}
+		</style>
+
+		<main>
+			<span class="status"></span>
+			<span class="name">
+				<strong>hbotii</strong> is online!
+			</span>
+		</main>
 	</body>
 </html>
