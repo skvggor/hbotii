@@ -3,7 +3,7 @@
 
 ---
 
-Built with :heart and:
+Built with :heart: and:
 
 - [DialogFlow](https://dialogflow.com)
 - [Nodejs](https://nodejs.org)
