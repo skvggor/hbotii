@@ -1,25 +1,31 @@
 {
   "name": "hbotii",
-  "version": "0.0.1",
-  "description": "Google Hangouts bot playground",
+  "version": "0.2.0",
+  "description": "Google Hangouts bot playground.",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js index.js"
   },
   "dependencies": {
+    "apiai": "^4.0.3",
     "express": "^4.16.2",
     "hangouts-bot": "^0.2.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "uuid": "^3.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcker/hbotii.git"
   },
   "keywords": [
+    "ai",
+    "apiai",
     "bot",
+    "chatbot",
+    "dialogflow",
+    "google",
     "hangouts",
-    "node",
-    "google"
+    "node"
   ],
   "author": "Marcos Garcia de Lima <marckfree@gmail.com> (http://marcker.github.io)",
   "license": "MIT",

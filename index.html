@@ -4,54 +4,55 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<style>
+				@keyframes status {
+					0% { background-color: #fff; }
+					50% { background-color: #33eb95; }
+					100% { background-color: #fff; }
+				}
+
+				body {
+					background-color: #b4efd3;
+				}
+
+				main {
+					font-size: 0;
+					height: 24px;
+					left: calc(50% - 67.5px);
+					position: absolute;
+					text-align: center;
+					top: calc(50% - 12px);
+					width: 135px;
+				}
+
+				span {
+					display: inline-block;
+					line-height: 1;
+					vertical-align: middle;
+				}
+
+				.status {
+					animation: status 1s infinite;
+					background-color: #33eb95;
+					border: 2px solid #f8f8f8;
+					border-radius: 50%;
+					height: 20px;
+					margin-right: 10px;
+					transition: background-color .3s ease;
+					width: 20px;
+				}
+
+				.name {
+					color: #333;
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 14px;
+				}
+			</style>
+
 		<title>&odot; hbotii</title>
 	</head>
 	<body>
-		<style>
-			@keyframes status {
-				0% { background-color: #fff; }
-				50% { background-color: #33eb95; }
-				100% { background-color: #fff; }
-			}
-
-			body {
-				background-color: #b4efd3;
-			}
-
-			main {
-				font-size: 0;
-				height: 24px;
-				left: calc(50% - 67.5px);
-				position: absolute;
-				text-align: center;
-				top: calc(50% - 12px);
-				width: 135px;
-			}
-
-			span {
-				display: inline-block;
-				line-height: 1;
-				vertical-align: middle;
-			}
-
-			.status {
-				animation: status 1s infinite;
-				background-color: #33eb95;
-				border: 2px solid #f8f8f8;
-				border-radius: 50%;
-				height: 20px;
-				margin-right: 10px;
-				transition: background-color .3s ease;
-				width: 20px;
-			}
-
-			.name {
-				color: #333;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 14px;
-			}
-		</style>
-
 		<main>
 			<span class="status"></span>
 			<span class="name">
